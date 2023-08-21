@@ -22,19 +22,3 @@ jobs:
         with:
           # Target URL
           target: "https://www.hackthissite.org/"
-
-name: zapfull-security-scan
-on:
-  push:
-    branches: [ master,main ]
-  pull_request:
-    branches: [ master,main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:     
-    - name: OWASP ZAP Full Scan
-      uses: zaproxy/action-full-scan@v0.1.0
-      with:
-        target: "https://www.hackthissite.org/"
